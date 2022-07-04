@@ -17,8 +17,10 @@ class MainActivity : AppCompatActivity() {
 
         val athkarList = Datasource().loadAthkar()
 
-        binding.rvAthkar.adapter = ItemAdapter(this, athkarList)
-        binding.rvAthkar.setHasFixedSize(true)
+        binding.btnView.setOnClickListener {
+            binding.rvAthkar.adapter = ItemAdapter(this, athkarList)
+            binding.rvAthkar.setHasFixedSize(true)
+        }
 
     }
 }
